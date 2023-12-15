@@ -57,11 +57,15 @@
     text-align: center;
     color: white;
 }
-#content button {
+#btn{
+ display:flex;
+ justify-content: center;
+
+}
+#btn button {
     font-size: 16px;
     padding: 10px 16px;
     margin-top:20px;
-    margin-left: 200px;
     border: 2px solid blue;
     background-color: brown;
     color: white;
@@ -86,7 +90,38 @@
     align-items: center;
 }
 #image img{
-    height: 300px;
-    width: 300px;
+    height: auto;
+    width: 100%;
     
+}
+@media (max-width:900px){
+    .birds{
+     flex-wrap: wrap;
+    }
+    #content,#image{
+        width:90%;
+        margin-bottom: 10px;
+    }
+    .birds{
+        height: 100%;
+    }
+    
+}
+@media (max-width: 550px){
+    .div1 img{
+        height: 50px;
+        width: 50px;
+        top: 60px;
+    }
+    .div2 ul li a{
+        font-size:15px;
+        font-weight: 450;
+        color:black;
+        padding:5px;
+        margin-left: 10px;
+
+    }
+    #content{
+        padding:20px 10px;
+    }
 }
