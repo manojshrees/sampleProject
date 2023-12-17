@@ -29,15 +29,55 @@
 }
 .div2 ul li{
     float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
 }
 .div2 ul li a{
     text-decoration: none;
     font-size: 22px;
     font-weight: 500;
-    color: black;
+    
     padding: 5px;
     margin-left: 25px;
+}
+.active{
+    color:green;
+    transition: .5s;
+}
+.active:hover{
+    color: black;
+}
+
+.active::after{
+    content:'';
+    display:block;
+    position:relative;
+    top: 2px;
+    color: green;
+    height: 3px;
+    width: 100%;
+    background: green;
+    transition: .8s;
+}
+.active:hover::after{
+    width: 30%;
+
+}
+.inactive::after{
+    content:'';
+    display:block;
+    position:relative;
+    top: 2px;
+    color: green;
+    height: 3px;
+    width: 0%;
+    background: green;
+    transition: .8s;
+}
+.inactive:hover::after{
+    width: 100%;
 }
 .birds{
     height: 90vh;
@@ -108,10 +148,13 @@
     
 }
 @media (max-width: 550px){
+    .navBar{
+        height: 7vh;
+    }
     .div1 img{
-        height: 50px;
-        width: 50px;
-        top: 60px;
+        height: 65px;
+        width: 60px;
+        top: 30px;
     }
     .div2 ul li a{
         font-size:15px;
@@ -124,4 +167,22 @@
     #content{
         padding:20px 10px;
     }
+}
+@media (max-width:300px){
+    .navBar{
+        height: 5vh;
+    }
+    .div1 img{
+        height:45px;
+        width:45px;
+        top: 25px;
+        left: 25px;
+    }
+    .div2 ul li a{
+        font-size: 13px;
+        font-weight: 450;
+        color: black;
+        margin-left: 2px;
+    }
+    
 }
